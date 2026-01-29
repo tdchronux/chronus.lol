@@ -1,0 +1,519 @@
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+Matiiiiiiiiiiiiiii !!
+
+
+
+
+
+
+AYOLAAAAAAS
+
+
+
+
+
+
+mas ese pend3j0 que dice:
+puro p1nch3 Cartel de caborca
+
+
+
+
+
+Ojala ofrescan un millon por su cabeza, me hace falta pagar unas cosillas 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--->
+
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Chronus Leak }:-) </title>
+  <style>
+    :root{
+      --bg:#050607;
+      --panel:#080b0d;
+      --ink:#c8ffd7;
+      --muted:#6fe39a;
+      --danger:#ff3b3b;
+      --border:rgba(150,255,190,.18);
+      --glow:rgba(110,255,170,.15);
+      --shadow: rgba(0,0,0,.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 50% 25%, rgba(80,255,160,.08), transparent 55%),
+                  radial-gradient(900px 500px at 15% 85%, rgba(255,80,80,.06), transparent 55%),
+                  var(--bg);
+      color:var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      display:grid;
+      place-items:center;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    /* subtle animated noise */
+    .noise{
+      pointer-events:none;
+      position:fixed; inset:-40%;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
+      mix-blend-mode:overlay;
+      opacity:.12;
+      animation: drift 10s linear infinite;
+    }
+    @keyframes drift{
+      0%{transform:translate3d(0,0,0)}
+      100%{transform:translate3d(10%,8%,0)}
+    }
+
+    /* scanlines */
+    .scanlines{
+      pointer-events:none;
+      position:fixed; inset:0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.03) 1px,
+        rgba(0,0,0,0) 3px,
+        rgba(0,0,0,0) 6px
+      );
+      opacity:.25;
+      mix-blend-mode:soft-light;
+    }
+
+    /* vignette */
+    .vignette{
+      pointer-events:none;
+      position:fixed; inset:0;
+      background: radial-gradient(circle at center, transparent 55%, rgba(0,0,0,.55) 100%);
+    }
+
+    .wrap{
+      width:min(980px, 92vw);
+      padding: 34px 18px;
+      position:relative;
+    }
+
+    .card{
+      position:relative;
+      background: linear-gradient(180deg, rgba(12,16,18,.92), rgba(7,10,12,.88));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow:
+        0 18px 70px var(--shadow),
+        0 0 0 1px rgba(110,255,170,.08) inset,
+        0 0 50px var(--glow);
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(800px 280px at 50% 0%, rgba(110,255,170,.12), transparent 60%),
+                  radial-gradient(700px 240px at 90% 80%, rgba(255,60,60,.08), transparent 60%);
+      filter: blur(2px);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    .topbar{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(150,255,190,.12);
+      background: rgba(0,0,0,.18);
+      backdrop-filter: blur(6px);
+    }
+
+    .dots{
+      display:flex; gap:8px;
+      opacity:.9;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: rgba(200,255,215,.18);
+      box-shadow:0 0 16px rgba(110,255,170,.14);
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+      color: rgba(200,255,215,.85);
+    }
+
+    .pill{
+      font-size:12px;
+      color: rgba(200,255,215,.78);
+      border:1px solid rgba(150,255,190,.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+    }
+
+    .content{
+      position:relative;
+      padding: 22px 18px 18px;
+    }
+
+    .countdown{
+      display:grid;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .label{
+      color: rgba(111,227,154,.9);
+      font-size: 12px;
+      letter-spacing:.06em;
+      text-transform: uppercase;
+    }
+
+    .time{
+      font-size: clamp(30px, 6vw, 54px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-shadow: 0 0 24px rgba(110,255,170,.10);
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:baseline;
+    }
+
+    .seg{
+      display:inline-flex;
+      gap: 10px;
+      align-items:baseline;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(150,255,190,.12);
+      box-shadow: 0 0 0 1px rgba(110,255,170,.04) inset;
+    }
+    .num{min-width:2ch; text-align:right}
+    .unit{
+      font-size: 12px;
+      color: rgba(200,255,215,.6);
+      letter-spacing:.06em;
+      text-transform: uppercase;
+    }
+
+    .cursor{
+      display:inline-block;
+      width: 10px;
+      height: 1.05em;
+      margin-left: 6px;
+      background: rgba(110,255,170,.9);
+      box-shadow: 0 0 18px rgba(110,255,170,.25);
+      animation: blink 1s step-end infinite;
+      transform: translateY(2px);
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .hr{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(150,255,190,.18), transparent);
+      margin: 14px 0 16px;
+    }
+
+    .msg{
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(200,255,215,.88);
+      white-space: pre-wrap;
+    }
+
+    .msg strong{ color: rgba(200,255,215,.98); }
+    .red{ color: var(--danger); font-weight:700; }
+    .muted{ color: rgba(200,255,215,.62); }
+
+    /* tiny glitch on title */
+    .glitch{
+      position:relative;
+      display:inline-block;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:900;
+      font-size: 12px;
+      opacity:.95;
+    }
+    .glitch::before,
+    .glitch::after{
+      content: attr(data-text);
+      position:absolute;
+      left:0; top:0;
+      opacity:.55;
+      clip-path: inset(0 0 0 0);
+      pointer-events:none;
+    }
+    .glitch::before{
+      transform: translate(1px,-1px);
+      color: rgba(255,80,80,.75);
+      animation: g1 4.2s infinite linear;
+    }
+    .glitch::after{
+      transform: translate(-1px,1px);
+      color: rgba(110,255,170,.8);
+      animation: g2 3.8s infinite linear;
+    }
+    @keyframes g1{
+      0%,100%{clip-path: inset(0 0 0 0)}
+      8%{clip-path: inset(12% 0 72% 0)}
+      10%{clip-path: inset(0 0 0 0)}
+      45%{clip-path: inset(55% 0 20% 0)}
+      47%{clip-path: inset(0 0 0 0)}
+    }
+    @keyframes g2{
+      0%,100%{clip-path: inset(0 0 0 0)}
+      16%{clip-path: inset(66% 0 18% 0)}
+      18%{clip-path: inset(0 0 0 0)}
+      62%{clip-path: inset(18% 0 66% 0)}
+      64%{clip-path: inset(0 0 0 0)}
+    }
+
+    .footer{
+      position:relative;
+      padding: 12px 16px 16px;
+      border-top: 1px solid rgba(150,255,190,.12);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      background: rgba(0,0,0,.12);
+    }
+    .kbd{
+      border:1px solid rgba(150,255,190,.18);
+      padding: 2px 8px;
+      border-radius: 8px;
+      background: rgba(0,0,0,.22);
+      color: rgba(200,255,215,.75);
+      font-size: 12px;
+    }
+    .hint{font-size:12px;color:rgba(200,255,215,.55)}
+    .ok{color:rgba(110,255,170,.9)}
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Terminal card">
+      <div class="topbar">
+        <div class="brand">
+          <span class="dots" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </span>
+          <span class="glitch" data-text="Hell0 m4d4fack3Rs n1gg45" >Hell0 m4d4fack3Rs n1gg45s</span>
+        </div>
+        <div class="pill" id="tzpill">TZ: America/Mexico_City</div>
+      </div>
+
+      <div class="content">
+        <div class="countdown">
+          <div class="label">Se meten con México, nos metemos con ustedes, pinches lammers, mañana al momento de publicar todo, nosotros lo haremos también... veamos que piensan los familiares y caza-recompesas  }:-)...</div>
+          <div class="time" aria-live="polite">
+            <span class="seg"><span class="num" id="d">--</span><span class="unit">días</span></span>
+            <span class="seg"><span class="num" id="h">--</span><span class="unit">hrs</span></span>
+            <span class="seg"><span class="num" id="m">--</span><span class="unit">min</span></span>
+            <span class="seg"><span class="num" id="s">--</span><span class="unit">seg</span></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+          <div class="hint" id="status">
+            <span class="ok">chr0nus</span>, información gratuita, de todos los miembros y sus familiares.
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="msg" id="message">
+<strong>Mensaje:</strong>
+
+<span class="red">L0stex (Cordoba,ARGENTINA) </span> <br>
+MA**O VAR***, Universidad ****** PLATA, <br>
+Tu papá don Juan va estar desilusionad (AY**S 8463)...<br>
+<br>
+<span class="red">y tú novia Marssepe..</span><br>
+
+( ED***DO DA**L CH*** Sanchez!)(AGS/LEON,MX)<br>
+//ya agarra el pedo we 37años y jugando al vergas<br>
+//no te lapasaste bonito en tus cumpleaños ? soplale chido,<br>
+// peleando con los niños argentinos, piensa en karla****20 <br>
+<br>
+<span class="red">que a su vez lo engaña con el APAJ </span><br>
+un  extorcionador,<br>
+que por más que cambies de apodos (Ilunfs), <br>
+vas a tener que cambiar de nombre pinche VITITO <br>
+//(che peda naca en octubre por tus cumple)<br>
+//cuida tu poblana!<br>
+
+<span class="red">Lizard,</span>, sapo!! <br>
+tu mañana sales en primera plana<br>
+
+<br>
+<span class="red">ARxX... </span> <br>
+(tu y tu novia softvid)<br>
+ que tal GDL? JAVIER P***E, no pensaste que tu numero <br>
+tiene ubicaciones ****2702, imaginate que se lo demos a <br>
+los narquitos que el pinche argentino<br>
+ segun les paga por info, <br>
+(cuando sepan que ustedes cantan todo ellos los buscarán)<br>
+ o que pasaría <br>
+si "******" se entera jaja! o peor...  llegan a visitar.<br>
+
+<span class="red">Wrench/Kaid0, </span><br>
+por más que tengas diferentes nacionalidades, <br>
+te queda el chileno S*** A***s MU***z. <br>
+//ya regresate a tu cerro, cambia de sudadera gris y bañate<br>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="hint">Modo: <span class="ok">Leak Lammers</span> · Data: <span class="ok">Chr0nus.zip 128MB</span></div>
+        <div class="hint">Atajo: <span class="kbd">Ctrl</span> + <span class="kbd">R</span> recargar</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Javi saca las chelas
+    // ciebeeeeercriminla jajasdjasdjasjd mis huevos ent u cara
+    const TZ = "America/Mexico_City";
+
+    const elD = document.getElementById("d");
+    const elH = document.getElementById("h");
+    const elM = document.getElementById("m");
+    const elS = document.getElementById("s");
+    const statusEl = document.getElementById("status");
+
+    // Build a Date representing the target moment in the target timezone.
+    // We'll convert both "now" and "target" to timestamps by constructing an equivalent UTC timestamp.
+    function tzToUTCStamp({year, month, day, hour, minute, second}, timeZone){
+      // Create a UTC date from the given components assuming they are in the given TZ.
+      // Technique: format a UTC date in the TZ and derive the offset by comparing.
+      const approxUTC = new Date(Date.UTC(year, month - 1, day, hour, minute, second || 0));
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone,
+        year:"numeric", month:"2-digit", day:"2-digit",
+        hour:"2-digit", minute:"2-digit", second:"2-digit",
+        hour12:false
+      }).formatToParts(approxUTC);
+
+      const get = (t)=> parts.find(p=>p.type===t)?.value;
+      const tzY = +get("year");
+      const tzMo = +get("month");
+      const tzD = +get("day");
+      const tzH = +get("hour");
+      const tzMi = +get("minute");
+      const tzS = +get("second");
+
+      // If approxUTC when viewed in TZ doesn't match desired local time,
+      // shift by the difference (in minutes) and return corrected UTC stamp.
+      const desired = Date.UTC(year, month - 1, day, hour, minute, second || 0);
+      const seen = Date.UTC(tzY, tzMo - 1, tzD, tzH, tzMi, tzS);
+      const diffMs = desired - seen;
+
+      return approxUTC.getTime() + diffMs;
+    }
+
+    function nowInTZParts(timeZone){
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone,
+        year:"numeric", month:"2-digit", day:"2-digit",
+        hour:"2-digit", minute:"2-digit", second:"2-digit",
+        hour12:false
+      }).formatToParts(new Date());
+      const get = (t)=> parts.find(p=>p.type===t)?.value;
+      return {
+        year:+get("year"),
+        month:+get("month"),
+        day:+get("day"),
+        hour:+get("hour"),
+        minute:+get("minute"),
+        second:+get("second")
+      };
+    }
+
+    const target = { year: 2026, month: 1, day: 30, hour: 13, minute: 0, second: 0 };
+    const targetUTC = tzToUTCStamp(target, TZ);
+
+    function pad2(n){ return String(n).padStart(2,"0"); }
+
+    function tick(){
+      const nowParts = nowInTZParts(TZ);
+      const nowUTC = tzToUTCStamp(nowParts, TZ);
+
+      let diff = targetUTC - nowUTC;
+
+      if (diff <= 0){
+        diff = 0;
+        statusEl.innerHTML = "<span class='red'>00:00</span> · hora alcanzada";
+      }
+
+      const sec = Math.floor(diff / 1000);
+      const days = Math.floor(sec / 86400);
+      const hrs  = Math.floor((sec % 86400) / 3600);
+      const min  = Math.floor((sec % 3600) / 60);
+      const s    = sec % 60;
+
+      elD.textContent = String(days);
+      elH.textContent = pad2(hrs);
+      elM.textContent = pad2(min);
+      elS.textContent = pad2(s);
+    }
+
+    tick();
+    setInterval(tick, 250);
+  </script>
+</body>
+</html>
